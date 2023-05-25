@@ -198,6 +198,7 @@ header{
 .section-certificate{
   padding:3rem;
   background-color: #fcbf49;
+  color:var(--blue-dark-80);
 }
 
 .section-certificate h1{
