@@ -76,6 +76,7 @@ header{
 .section-info{
   padding:4rem 5rem;
   padding-bottom:2rem;
+  color:var(--blue-dark-80);
 }
 
 .section-info h1{
@@ -92,7 +93,7 @@ header{
 
 .section-skills{
   padding:4rem;
-  /* background-color: white; */
+  color: var(--blue-dark-80);
 }
 
 .skills-box{
