@@ -10,7 +10,11 @@ function App() {
     <>
       <header>
         <div className="header-box">
-          <img src={PranjulImg} className="header-img" alt="Pranjul Jain" />
+          <div className='frame'>
+            <div className='frame-one'></div>
+            <div className='frame-second'></div>
+            <img src={PranjulImg} className="header-img" alt="Pranjul Jain" />
+          </div>
           <div className='header-subbox'>
               <h1>Pranjul Jain</h1>
               <h2>Full-Stack Webdevelper</h2>
@@ -26,7 +30,7 @@ function App() {
                 </div>
                 <p>
                     <span style={{fontWeight:"600",color:"wheat"}}>Branch</span>
-                    <span className='gap'>Internet Of Things 3<sup>rd</sup> Year</span>
+                    <span className='gap'>Internet Of Things</span>
                 </p>
                 <div className="email">
                     <i class="fa-regular fa-envelope" style={{fontWeight:"600"}}></i>
@@ -41,44 +45,82 @@ function App() {
           About Me
         </h1>
         <p>
-          Hello, My name is Pranjul Jain, and I am currently pursuing my Btech from Madhav Institute of Technology and Gwalior (M.P.).
-          , I have started my journey through the C and C++ programming languages and practised some questions to hackkerank and leetcode.
-          and after developing my logic, I switched to Python, which opened the doors to many opportunities for me, such as machine learning,
-          web development and data scienceAfter that, in my 3rd year of college, I got to know about NPTEL, through which I learned Java and data mining.
-          and DSA with Python, Recently, I took a course in Tutedude and learned MernStack, but I am still a beginner in it. Now I have taken an interest in
-          in devops so that I can learn how to deploy and monitor my web application.
-          I have done 100+ question in <strong>Leetcode</strong> and i am a 5 star coder in <strong>Hackkerrank</strong> in c++ and python.
+        I'm a dedicated individual with a strong passion for coding, driven by a desire to stay at the forefront of new frameworks and libraries. 
+        My practical approach to learning prioritizes hands-on experience and project work over theoretical knowledge. My goal is to become a 
+        proficient full-stack developer, and I've already gained practical expertise in backend, frontend, and cloud technologies.
+        One of my standout strengths is problem-solving; when I encounter challenges, I'm adept at finding solutions by consulting official 
+        documentation, exploring GitHub repositories, engaging with the Stack Overflow community, utilizing ChatGPT, and leveraging various 
+        online resources.
         </p>
       </section>
       <section className="section-skills">
         <h1>My Skills</h1>
         <ul className="skills-box">
           <div>
-            <li className="skills-item intermediate">C</li>
-            <li className="skills-item intermediate">C++</li>
+            <li className="skills-item intermediate">
+              C
+              <div class="skill-after"></div>
+            </li>
+            <li className="skills-item intermediate">
+              C++
+              <div class="skill-after"></div>
+            </li>
           </div>
           <div>
-            <li className="skills-item advanced">Python</li>
-            <li className="skills-item advanced">Web Development</li>
+            <li className="skills-item advanced">
+              Python
+              <div class="skill-after"></div>
+            </li>
+            <li className="skills-item advanced">
+              Web Development
+              <div class="skill-after"></div>
+            </li>
           </div>
           <div>
-            <li className="skills-item intermediate">Django</li>
-            <li className="skills-item beginner">Machine Learning</li>
+            <li className="skills-item intermediate">
+              Django
+              <div class="skill-after"></div>
+            </li>
+            <li className="skills-item beginner">
+              Machine Learning
+              <div class="skill-after"></div>
+            </li>
           </div>
           <div>
-            <li className="skills-item beginner">Deep Learning</li>
-            <li className="skills-item intermediate">Datascience</li>
+            <li className="skills-item beginner">
+              Deep Learning
+              <div class="skill-after"></div>
+            </li>
+            <li className="skills-item intermediate">
+              Datascience
+              <div class="skill-after"></div>
+            </li>
           </div>
           <div>
-            <li className="skills-item intermediate">MySql</li>
-            <li className="skills-item beginner">MongoDb</li>
+            <li className="skills-item intermediate">
+              MySql
+              <div class="skill-after"></div>
+            </li>
+            <li className="skills-item beginner">
+              MongoDb
+              <div class="skill-after"></div>
+            </li>
           </div>
           <div>
-            <li className="skills-item beginner">Express.js</li>
-            <li className="skills-item advanced">React.js</li>
+            <li className="skills-item beginner">
+            Express.js
+            <div class="skill-after"></div>
+          </li>
+            <li className="skills-item advanced">
+              React.js
+              <div class="skill-after"></div>
+            </li>
           </div>
           <div>
-            <li className="skills-item advanced">Node.js</li>
+            <li className="skills-item advanced">
+              Node.js
+              <div class="skill-after"></div>
+            </li>
           </div>
         </ul>
       </section>
