@@ -93,6 +93,7 @@
 @media screen and (max-width:950px) {
     .skills-box div{
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
         align-items: center;
     }
 
@@ -131,4 +132,23 @@
         width: 70%;
     }
     
+}
+
+@media screen and (max-width:514px) {
+    .skills-item{
+        font-size: clamp(0.5em,1.2vw,1.5em);
+    }
+
+    .skills-box{
+        row-gap: 2rem;
+    }
+
+    .skill-after{
+        left:-20px;
+        top:-20px;
+    }
+
+    .section-skills{
+        padding-bottom: 1.5rem;
+    }
 }
