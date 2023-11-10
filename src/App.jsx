@@ -82,9 +82,9 @@ function App() {
                 </div>
                 <hr className='certificate-hr' />
                 <ul className='certificate-info-subbox'>
-                  <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>PYTHON, MACHINE LEARNING ALGORITHMS and BASIC DEEP LEARNING</strong></li>
-                  <li>I got to work on three <strong>MINOR PROJECTS</strong> such as <strong>IRIS CLASSIFICATION, GMAIL SPAM MAIL DETECTION.</strong></li>
-                  <li>I embarked on a <strong>MAJOR PROJECT</strong> envolving <strong>CAT VS DOG CLASSIFICATION</strong> using <strong>CONVOLUTIONAL NEURAL NETWORKS</strong></li>
+                  <li>This internship has been instrumental in enhancing my problem-solving skills and fostering continuous learning.</li>
+                  <li>I proficiently address technical queries spanning Python, MERN stack, data science, C++, DSA, and DevOps.</li>
+                  <li>Whenever I encounter challenges, I leverage Tutedude courses to swiftly overcome obstacles and advance in problem-solving.</li>
                 </ul>
               </div>
             </div>
