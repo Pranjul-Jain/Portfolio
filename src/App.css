@@ -40,7 +40,6 @@ h1{
 
 .section-certificate h1{
     text-align: center;
-    margin-bottom: 3.8rem;
     font-size: clamp(3.3em,4em,5em);
 }
 
