@@ -136,7 +136,7 @@
 
 @media screen and (max-width:514px) {
     .skills-item{
-        font-size: clamp(0.5em,1.2vw,1.5em);
+        font-size: clamp(0.7em,1.2vw,1.5em);
     }
 
     .skills-box{

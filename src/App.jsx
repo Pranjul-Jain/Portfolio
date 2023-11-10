@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import Education from './components/Education/Education'
 import Skills from './components/Skills/Skills'
 import BaoiamImg from "./assets/images/Baoiam.jpg"
+import TutedudeImg from "./assets/images/Tutedude.png"
 import './App.css'
 
 function App() {
@@ -68,12 +69,32 @@ function App() {
       <Education/>
       <Skills/>
       <section className="section-certificate">
-        <h1>Internship Certificate</h1>
+        <h1>INTERNSHIPS</h1>
         <div className="certificate-frame">
+            <div className="certificate-item">
+              <div className="certificate-img" alt="Tutedude">
+                <img src={TutedudeImg} />
+              </div>
+              <div className="certificate-info">
+                <div className="certificate-heading">
+                  <h2>MENTOR</h2>
+                  <span>CURRENTLY WORKING</span>
+                </div>
+                <hr className='certificate-hr' />
+                <ul className='certificate-info-subbox'>
+                  <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>PYTHON, MACHINE LEARNING ALGORITHMS and BASIC DEEP LEARNING</strong></li>
+                  <li>I got to work on three <strong>MINOR PROJECTS</strong> such as <strong>IRIS CLASSIFICATION, GMAIL SPAM MAIL DETECTION.</strong></li>
+                  <li>I embarked on a <strong>MAJOR PROJECT</strong> envolving <strong>CAT VS DOG CLASSIFICATION</strong> using <strong>CONVOLUTIONAL NEURAL NETWORKS</strong></li>
+                </ul>
+              </div>
+            </div>
             <div className="certificate-item">
               <img src={FirststopImg} alt="1stop" />
               <div className="certificate-info">
-                <h2>MACHINE LEARNING</h2>
+                <div className="certificate-heading">
+                  <h2>MACHINE LEARNING</h2>
+                  <span>SEP/2021 - NOV/2021</span>
+                </div>
                 <hr className='certificate-hr' />
                 <ul className='certificate-info-subbox'>
                   <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>PYTHON, MACHINE LEARNING ALGORITHMS and BASIC DEEP LEARNING</strong></li>
@@ -85,7 +106,10 @@ function App() {
             <div className="certificate-item">
               <img src={VerzeoImg} alt="verzeo" />
               <div className="certificate-info">
-                <h2>DATASCIENCE WITH PYTHON</h2>
+                <div className="certificate-heading">
+                  <h2>DATASCIENCE WITH PYTHON</h2>
+                  <span>NOV/2021 - JAN/2022</span>
+                </div>
                 <hr className='certificate-hr' />
                 <div className='certificate-info-subbox small-font'>
                   <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>TABLEAU(DATA VISUALIZATION TOOL), DATASCIENCE LIBRARIES(PANDAS AND NUMPY)</strong></li>
@@ -97,7 +121,10 @@ function App() {
             <div className="certificate-item">
               <img src={BaoiamImg} alt="Baoiam" />
               <div className="certificate-info">
-                <h2>WEB DEVELOPMENT</h2>
+              <div className="certificate-heading">
+                  <h2>WEB DEVELOPMENT</h2>
+                  <span>MAY/2023 - JUNE/2023</span>
+                </div>
                 <hr className='certificate-hr' />
                 <ul className='certificate-info-subbox'>
                   <li>Enhanced the responsiveness of three web pages to ensure optimal user experience across various devices</li>
@@ -110,10 +137,13 @@ function App() {
             <div className="certificate-item">
               <img src={TeachnookImg} alt="Teachnook" />
               <div className="certificate-info">
-                <h2>WEB DEVELOPMENT</h2>
+                <div className="certificate-heading">
+                  <h2>WEB DEVELOPMENT</h2>
+                  <span>MARCH/2022 - APR/2022</span>
+                </div>
                 <hr className='certificate-hr' />
                 <ul className='certificate-info-subbox'>
-                  <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>HTML, CSS and JAVASCRIPT</strong> and than at last i got to work on two MINOR PROJECTS which is a <strong>TRAVELLING WEBSITE</strong> and a <strong>WEATHER WEBSITE</strong></li>
+                  <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>HTML, CSS and JAVASCRIPT</strong> and than at last I got to work on two MINOR PROJECTS which is a <strong>TRAVELLING WEBSITE</strong> and a <strong>WEATHER WEBSITE</strong></li>
                 </ul>
               </div>
             </div>   

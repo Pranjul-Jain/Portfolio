@@ -21,7 +21,8 @@
     background-color: #023047;
     color: white;
     padding: 2rem 3rem;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border: whitesmoke solid 10px;
     z-index: 5;
 }
 
@@ -41,7 +42,7 @@
     left: -20px;
     top: -30px;
     background-color: #023047;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     z-index: -1;
 }
 
@@ -62,12 +63,23 @@
         top:-20px;
     }
 
+    .education-box{
+        padding:1.5rem;
+        row-gap: 0.2rem;
+    }
+
     .education-grid {
-        row-gap: 3rem;
+        row-gap: 2rem;
+    }
+
+    .education-box .heading,
+    .education-box .marks {
+        font-size: clamp(0.6em, 1vw, 1.5em);
+        column-gap: 1em;
     }
 
     .section-education{
-        padding:2rem;
+        padding:2rem 1.5rem;
         padding-bottom: 0;
     }
 
