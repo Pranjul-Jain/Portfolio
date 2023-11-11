@@ -13,7 +13,7 @@ const Education = () => {
             </div>
             <div className='marks'>
               <p>Branch: Internet Of Things</p>
-              <span>CGPA: 8.59</span>
+              <span>CGPA: 8.59 *upto 6th sem*</span>
             </div>
             <div className='back-card'></div>
           </div>
@@ -31,7 +31,7 @@ const Education = () => {
           <div className="education-box">
             <div className='heading'>
               <h2>PRAGATI VIDYA PEETH, GWALIOR</h2>
-              <span>2018-2019</span>
+              <span>2017-2018</span>
             </div>
             <div className='marks'>
               <p>10th CBSE BOARD</p>

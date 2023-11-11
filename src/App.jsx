@@ -54,22 +54,22 @@ function App() {
         <div className="projects-grid">
             <div className="projects-card">
                 <h2>
-                    WHATSAPP CLONE
+                <i className="fa-brands fa-whatsapp"></i> WHATSAPP CLONE
                 </h2>
                 <ul className="projects-list">
-                  <li>Technology Used -: Django, React.js, Mongo DB, Nginx, Docker, and Aws Cloud.</li>
-                  <li>This project is a Full Stack application similar to WhatsApp, with a user interface designed to resemble WhatsApp.</li>
-                  <li>For real-time chat messages, Django Channels library is utilized, employing the WebSocket protocol for sending and receiving messages in real time. Session management is implemented using HTTP-only cookies to keep users logged in until they manually log out.</li>
+                  <li><strong>Technology Used -: Django, React.js, Mongo DB, Nginx, Docker, and Aws Cloud.</strong></li>
+                  <li>I am the sole creator of this comprehensive Full Stack application similar to WhatsApp, with a user interface designed to resemble WhatsApp.</li>
+                  <li>For <strong>real-time chat messages, Django Channels library is utilized</strong>, employing the WebSocket protocol for sending and receiving messages in real time. Session management is implemented using HTTP-only cookies to keep users logged in until they manually log out.</li>
                   <li>Nginx serves as a reverse proxy, handling React.js static files, and SSL certificate configuration is done in the NGINX conf file. SSL '.PEM' files are generated using CERTBOT. The deployment involves creating multiple Docker files and a Docker-Compose.yaml file, with the final deployment on an AWS Cloud EC2 instance.</li>
                   <li>GitHub link : <a href="https://github.com/Pranjul-Jain/whatsapp-clone" self="_blank">Github.whatsappclone.com</a></li>
                 </ul>
             </div>
             <div className="projects-card">
                 <h2>
-                    HAND SIGN CLASSIFICATION USING CNN AND OPENCV
+                <i class="fa-solid fa-hand"></i> HAND SIGN CLASSIFICATION USING CNN AND OPENCV
                 </h2>
                 <ul className="projects-list">
-                  <li>Dataset Used -: ASL Alphabet Dataset from kaggle.</li>
+                  <li><strong>Dataset Used -: ASL Alphabet Dataset from kaggle.</strong></li>
                   <li> Firstly, I preprocessed my images to reduce the dataset size. The dataset is divided into a train dataset and a test dataset. The train dataset is further split into training and validation datasets during the neural network model training.</li>
                   <li>During preprocessing, I converted the images to grayscale and applied a blur to minimize noise. Subsequently, I computed the gradient of the image in the x and y directions using the Sobel function in OpenCV to capture edges. I then converted both images to absolute scale to eliminate negative values. Finally, I added the weighted average of both images and stored the result in a file.</li>
                   <li>In the modeling phase, I utilized a train data generator to generate additional images from the train dataset and test dataset, promoting better generalization of my model. Following this, I created and trained my neural network model.</li>
@@ -78,7 +78,7 @@ function App() {
             </div>
             <div className="projects-card">
                 <h2>
-                    IOT DIGITAL LOCKER
+                  <i class="fa-solid fa-lock"></i> IOT DIGITAL LOCKER
                 </h2>
                 <ul className="projects-list">
                     <li>
@@ -125,14 +125,12 @@ function App() {
         if(!item.classList.contains("front-certificate")){
           item.classList.add("front-certificate");
           item.classList.remove("back-certificate");
-          console.log(item)
         }
       }else if(item.classList.contains("front-certificate")){
         item.classList.remove("front-certificate");
         item.classList.add("back-certificate");
       }
     })
-
   }
 }
 

@@ -26,17 +26,31 @@ const Certificates = () => {
             </div>
         </div>
         <div className="certificate-item">
-            <img src={FirststopImg} alt="1stop" />
+            <img src={BaoiamImg} alt="Baoiam" />
             <div className="certificate-info">
             <div className="certificate-heading">
-                <h2>MACHINE LEARNING</h2>
-                <span>SEP/2021 - NOV/2021</span>
+                <h2>WEB DEVELOPMENT</h2>
+                <span>MAY/2023 - JUNE/2023</span>
             </div>
             <hr className='certificate-hr' />
             <ul className='certificate-info-subbox'>
-                <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>PYTHON, MACHINE LEARNING ALGORITHMS and BASIC DEEP LEARNING</strong></li>
-                <li>I got to work on three <strong>MINOR PROJECTS</strong> such as <strong>IRIS CLASSIFICATION, GMAIL SPAM MAIL DETECTION.</strong></li>
-                <li>I embarked on a <strong>MAJOR PROJECT</strong> envolving <strong>CAT VS DOG CLASSIFICATION</strong> using <strong>CONVOLUTIONAL NEURAL NETWORKS</strong></li>
+                <li>Enhanced the responsiveness of three web pages to ensure optimal user experience across various devices</li>
+                <li>Actively participated in group meetings to coordinate tasks and responsibilities among interns</li>
+                <li>Played a pivotal role in the frontend development of the website</li>
+                <li>Successfully deployed the BAOIAM website on Amazon Cloud, ensuring its accessibility to users worldwide</li>
+            </ul>
+            </div>
+        </div>
+        <div className="certificate-item">
+            <img src={TeachnookImg} alt="Teachnook" />
+            <div className="certificate-info">
+            <div className="certificate-heading">
+                <h2>WEB DEVELOPMENT</h2>
+                <span>MARCH/2022 - APR/2022</span>
+            </div>
+            <hr className='certificate-hr' />
+            <ul className='certificate-info-subbox'>
+                <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>HTML, CSS and JAVASCRIPT</strong> and than at last I got to work on two MINOR PROJECTS which is a <strong>TRAVELLING WEBSITE</strong> and a <strong>WEATHER WEBSITE</strong></li>
             </ul>
             </div>
         </div>
@@ -56,34 +70,20 @@ const Certificates = () => {
             </div>
         </div>
         <div className="certificate-item">
-            <img src={BaoiamImg} alt="Baoiam" />
+            <img src={FirststopImg} alt="1stop" />
             <div className="certificate-info">
             <div className="certificate-heading">
-                <h2>WEB DEVELOPMENT</h2>
-                <span>MAY/2023 - JUNE/2023</span>
+                <h2>MACHINE LEARNING</h2>
+                <span>SEP/2021 - NOV/2021</span>
             </div>
             <hr className='certificate-hr' />
             <ul className='certificate-info-subbox'>
-                <li>Enhanced the responsiveness of three web pages to ensure optimal user experience across various devices</li>
-                <li>Actively participated in group meetings to coordinate tasks and responsibilities among interns</li>
-                <li>Played a pivotal role in the frontend development of the website</li>
-                <li>Successfully deployed the BAOIAM website on Amazon Cloud, ensuring its accessibility to users worldwide</li>
+                <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>PYTHON, MACHINE LEARNING ALGORITHMS and BASIC DEEP LEARNING</strong></li>
+                <li>I got to work on three <strong>MINOR PROJECTS</strong> such as <strong>IRIS CLASSIFICATION, GMAIL SPAM MAIL DETECTION.</strong></li>
+                <li>I embarked on a <strong>MAJOR PROJECT</strong> involving <strong>CAT VS DOG CLASSIFICATION</strong> using <strong>CONVOLUTIONAL NEURAL NETWORKS</strong></li>
             </ul>
             </div>
-        </div>   
-        <div className="certificate-item">
-            <img src={TeachnookImg} alt="Teachnook" />
-            <div className="certificate-info">
-            <div className="certificate-heading">
-                <h2>WEB DEVELOPMENT</h2>
-                <span>MARCH/2022 - APR/2022</span>
-            </div>
-            <hr className='certificate-hr' />
-            <ul className='certificate-info-subbox'>
-                <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>HTML, CSS and JAVASCRIPT</strong> and than at last I got to work on two MINOR PROJECTS which is a <strong>TRAVELLING WEBSITE</strong> and a <strong>WEATHER WEBSITE</strong></li>
-            </ul>
-            </div>
-        </div>   
+        </div>      
     </>
   )
 }

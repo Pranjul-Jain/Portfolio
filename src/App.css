@@ -155,6 +155,30 @@ h1{
   column-gap:2rem;
 }
 
+.slider-dots{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.slider-dot{
+  width: 10px;
+  height: 10px;
+  border:3px solid transparent;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.marked{
+  background-color: #072f4e;
+  border-color:#023047;
+}
+
 /* section education */
 
 /* section projects */
@@ -199,6 +223,10 @@ h1{
 .projects-list li{
   text-align: justify;
   font-size: clamp(0.5em,1.1vw,2em);
+}
+
+.projects-card i{
+  margin-right: 0.5rem;
 }
 
 /* section nptel */
@@ -291,6 +319,7 @@ h1{
     width: 40rem;
     height: 100%;
   }
+
 }
 
 @media screen and (max-width:950px) {
@@ -298,11 +327,15 @@ h1{
     padding-left:0;
     padding-right: 0;
   }
+
+  .small-font li{
+    font-size: clamp(0.9em,1.5vw,5em) !important;
+  }
 }
 
 @media screen and (max-width:1000px){
   .certificate-frame{
-    height:650px;
+    height:780px;
   }
 
   .certificate-buttons{
@@ -366,10 +399,11 @@ h1{
   }
 
   .certificate-frame{
-    height:600px;
+    height:680px;
   }
+
   .small-font{
-    font-size: clamp(0.65em,1vw,4em);
+    font-size: clamp(0.65em,1vw,4em) !important;
   }
 
   .section-projects{
@@ -427,6 +461,14 @@ h1{
     .certificate-box{
       width: 26rem;
     }
+
+    .certificate-frame{
+      height: 700px;
+    }
+
+    .small-font li{
+      font-size: clamp(1.1em,1.5vw,5em) !important;
+    }
 }
 
 
@@ -444,7 +486,7 @@ h1{
   }
 
   .certificate-frame{
-    height: 530px;
+    height: 630px;
   }
 
   .certificate-frame img,.certificate-img{
@@ -528,7 +570,7 @@ h1{
 
 @media screen and (max-width:480px) {
   .certificate-frame{
-    height: 480px;
+    height: 550px;
   }
   .certificate-info-subbox li{
     font-size: clamp(0.55em,1.2vw,2em);
@@ -537,7 +579,21 @@ h1{
     font-size: clamp(0.5em,1.2vw,2em);
   }
 
+  .certificate-info{
+    padding:2rem 1rem;
+  }
+
+  .small-font li{
+    font-size: clamp(0.7em,1.3vw,5em) !important;
+  }
+
   .projects-list h2{
     font-size: 1em;
+  }
+}
+
+@media screen and (max-width:341px) {
+  .small-font li{
+    font-size: clamp(0.6em,1.2vw,5em) !important;
   }
 }
