@@ -1,53 +1,33 @@
-import { useState,useEffect,useRef } from 'react'
-import FirststopImg from "./assets/images/1stop.jpg"
-import VerzeoImg from "./assets/images/Verzeo.jpg"
-import TeachnookImg from "./assets/images/Teachnook.jpg"
+import React,{ useEffect,useRef } from 'react'
 import Header from './components/Header/Header'
 import Education from './components/Education/Education'
 import Skills from './components/Skills/Skills'
-import BaoiamImg from "./assets/images/Baoiam.jpg"
-import TutedudeImg from "./assets/images/Tutedude.png"
+import Slider from './components/Slider/Slider'
+import DataMiningImg from "./assets/images/Data Mining.jpeg"
+import JavaImg from "./assets/images/Programming In Java.jpeg"
+import PythonImg from "./assets/images/Programming, Data Structures And Algorithms Using Python.jpeg"
 import './App.css'
 
 function App() {
-
-  const currentWindow = useRef(0);
-  const itemSize = useRef(0);
-  const windowInterval = useRef();
-  const currentWindowRef = useRef(0);
-  const itemSizeRef = useRef(0);
+  
+  const currentWindow = useRef(0)
+  const itemSize = useRef(0)
+  const windowInterval = useRef()
 
   useEffect(()=>{
-    const certificateFrame = document.querySelectorAll(".certificate-item");
-    const nextBtn = document.querySelector("#next-btn");
-    const prevBtn = document.querySelector("#prev-btn");
+    const certificates = document.querySelectorAll(".nptel-certificate")
+    itemSize.current = certificates.length
 
-    if(certificateFrame){
-      itemSize.current = certificateFrame.length;
-      certificateFrame.forEach((item,index)=>{
-        item.style.left = `${index*100}%`;
-      });
-      currentWindowRef.current.innerHTML = 1
-      itemSizeRef.current.innerHTML = itemSize.current
-    }
-
-    if(nextBtn && prevBtn){
-      nextBtn.addEventListener("click",nextWindow)
-      prevBtn.addEventListener("click",prevWindow)
-      windowInterval.current = setInterval(nextWindow,5000);
+    if(certificates){
+      windowInterval.current = setInterval(move,6000);
     }
 
     return ()=>{
-      nextBtn && nextBtn.removeEventListener("click",nextWindow)
-      prevBtn && prevBtn.removeEventListener("click",prevWindow)
-      certificateFrame && certificateFrame.forEach((item,index)=>{
-        item.style.transform = `translateX(0)`;
-      })
-      currentWindow.current = 0
-      itemSize.current = 0
       clearInterval(windowInterval.current)
+      itemSize.current = 0;
+      currentWindow.current = 0
     }
-
+    
   })
 
   return (
@@ -68,165 +48,92 @@ function App() {
       </section>
       <Education/>
       <Skills/>
-      <section className="section-certificate">
-        <h1>INTERNSHIPS</h1>
-        <div className="certificate-frame">
-            <div className="certificate-item">
-              <div className="certificate-img" alt="Tutedude">
-                <img src={TutedudeImg} />
-              </div>
-              <div className="certificate-info">
-                <div className="certificate-heading">
-                  <h2>MENTOR</h2>
-                  <span>CURRENTLY WORKING</span>
-                </div>
-                <hr className='certificate-hr' />
-                <ul className='certificate-info-subbox'>
-                  <li>This internship has been instrumental in enhancing my problem-solving skills and fostering continuous learning.</li>
-                  <li>I proficiently address technical queries spanning Python, MERN stack, data science, C++, DSA, and DevOps.</li>
-                  <li>Whenever I encounter challenges, I leverage Tutedude courses to swiftly overcome obstacles and advance in problem-solving.</li>
+      <Slider/>
+      <section className="section-projects">
+        <h1>PROJECTS</h1>
+        <div className="projects-grid">
+            <div className="projects-card">
+                <h2>
+                    WHATSAPP CLONE
+                </h2>
+                <ul className="projects-list">
+                  <li>Technology Used -: Django, React.js, Mongo DB, Nginx, Docker, and Aws Cloud.</li>
+                  <li>This project is a Full Stack application similar to WhatsApp, with a user interface designed to resemble WhatsApp.</li>
+                  <li>For real-time chat messages, Django Channels library is utilized, employing the WebSocket protocol for sending and receiving messages in real time. Session management is implemented using HTTP-only cookies to keep users logged in until they manually log out.</li>
+                  <li>Nginx serves as a reverse proxy, handling React.js static files, and SSL certificate configuration is done in the NGINX conf file. SSL '.PEM' files are generated using CERTBOT. The deployment involves creating multiple Docker files and a Docker-Compose.yaml file, with the final deployment on an AWS Cloud EC2 instance.</li>
+                  <li>GitHub link : <a href="https://github.com/Pranjul-Jain/whatsapp-clone" self="_blank">Github.whatsappclone.com</a></li>
                 </ul>
-              </div>
             </div>
-            <div className="certificate-item">
-              <img src={FirststopImg} alt="1stop" />
-              <div className="certificate-info">
-                <div className="certificate-heading">
-                  <h2>MACHINE LEARNING</h2>
-                  <span>SEP/2021 - NOV/2021</span>
-                </div>
-                <hr className='certificate-hr' />
-                <ul className='certificate-info-subbox'>
-                  <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>PYTHON, MACHINE LEARNING ALGORITHMS and BASIC DEEP LEARNING</strong></li>
-                  <li>I got to work on three <strong>MINOR PROJECTS</strong> such as <strong>IRIS CLASSIFICATION, GMAIL SPAM MAIL DETECTION.</strong></li>
-                  <li>I embarked on a <strong>MAJOR PROJECT</strong> envolving <strong>CAT VS DOG CLASSIFICATION</strong> using <strong>CONVOLUTIONAL NEURAL NETWORKS</strong></li>
+            <div className="projects-card">
+                <h2>
+                    HAND SIGN CLASSIFICATION USING CNN AND OPENCV
+                </h2>
+                <ul className="projects-list">
+                  <li>Dataset Used -: ASL Alphabet Dataset from kaggle.</li>
+                  <li> Firstly, I preprocessed my images to reduce the dataset size. The dataset is divided into a train dataset and a test dataset. The train dataset is further split into training and validation datasets during the neural network model training.</li>
+                  <li>During preprocessing, I converted the images to grayscale and applied a blur to minimize noise. Subsequently, I computed the gradient of the image in the x and y directions using the Sobel function in OpenCV to capture edges. I then converted both images to absolute scale to eliminate negative values. Finally, I added the weighted average of both images and stored the result in a file.</li>
+                  <li>In the modeling phase, I utilized a train data generator to generate additional images from the train dataset and test dataset, promoting better generalization of my model. Following this, I created and trained my neural network model.</li>
+                  <li><a self="_blank" href="https://colab.research.google.com/drive/1HMMdRmyyoJQJXZuGgrutgZ7zhMMkUntr#scrollTo=um5PBgGNP8jR">Preprocessed Python Notebook LINK</a> || <a href="https://colab.research.google.com/drive/181SiSOaw2VbW9_BQWgC5InMtJFxBWB8S#scrollTo=My9ySQqG4RTK" self="_blank">Modeling Python Notebook LINK</a></li>
                 </ul>
-              </div>
             </div>
-            <div className="certificate-item">
-              <img src={VerzeoImg} alt="verzeo" />
-              <div className="certificate-info">
-                <div className="certificate-heading">
-                  <h2>DATASCIENCE WITH PYTHON</h2>
-                  <span>NOV/2021 - JAN/2022</span>
-                </div>
-                <hr className='certificate-hr' />
-                <div className='certificate-info-subbox small-font'>
-                  <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>TABLEAU(DATA VISUALIZATION TOOL), DATASCIENCE LIBRARIES(PANDAS AND NUMPY)</strong></li>
-                  <li>I embarked on a <strong>MINOR PROJECT</strong> involving <strong>CAR SALES PREDICTION</strong> utilizing the fbprophet library for time series forecasting. Initially, I have preprocessed the data and than i have modelled and visualize the data. Subsequently, I employed the Finally, I deployed the application using Streamlit.</li>
-                  <li>I participated in a <strong>MAJOR PROJECT</strong> centered on visualizing <strong>Greenland destination data using Tableau(<a href="https://public.tableau.com/app/profile/pranjul2252/viz/GreenDestinationsMajorProject/Dashboard" target="_blank">Tableau Project Link</a>)</strong>. This collaborative effort involved a team of three individuals working together to create an informative dashboard. Our objective was to transform the raw data into insightful visualizations that effectively communicated key trends and patterns related to Greenland tourism.</li>
-                </div>
-              </div>
+            <div className="projects-card">
+                <h2>
+                    IOT DIGITAL LOCKER
+                </h2>
+                <ul className="projects-list">
+                    <li>
+                        This project involves the creation of a locker system. Initially, the locker is secured, and upon providing power to the Arduino, the user can unlock it by entering a password through the keypad or by presenting a specific frequency ID card to the RFID sensor.
+                    </li>
+                    <li>
+                        If any button on the keypad is pressed, a sound is produced through the piezoelectric sensor. If the entered password is correct, a red LED will illuminate, and the buzzer will emit a distinct opening sound. Conversely, if the password is incorrect, the buzzer will produce a different sound.
+                    </li>
+                    <li>
+                        The keypad's operation relies on completing connections in rows and columns. Through the keypad library, character mapping is defined, associating each button with a specific column. When an RFID card is placed in front of the RFID sensor, the sensor transmits and receives frequencies or IDs from the card. The piezoelectric sensor then generates corresponding opening and alert sounds, similar to the keypad.
+                    </li>
+                    <li>
+                        The mechanism for unlocking involves the rotation of a servo motor by 90 degrees, thereby unlocking the gate. The reverse process occurs when locking the system.
+                    </li>
+                    <li><a self="_blank" href="https://docs.google.com/document/d/1fwGbPots0Qn61id8d1BhlaICZBlqYB1m/edit?usp=sharing&ouid=100677663551990200098&rtpof=true&sd=true">IOT LOCKER LINK</a></li>
+                </ul>
             </div>
-            <div className="certificate-item">
-              <img src={BaoiamImg} alt="Baoiam" />
-              <div className="certificate-info">
-              <div className="certificate-heading">
-                  <h2>WEB DEVELOPMENT</h2>
-                  <span>MAY/2023 - JUNE/2023</span>
-                </div>
-                <hr className='certificate-hr' />
-                <ul className='certificate-info-subbox'>
-                  <li>Enhanced the responsiveness of three web pages to ensure optimal user experience across various devices</li>
-                  <li>Actively participated in group meetings to coordinate tasks and responsibilities among interns</li>
-                  <li>Played a pivotal role in the frontend development of the website</li>
-                  <li>Successfully deployed the BAOIAM website on Amazon Cloud, ensuring its accessibility to users worldwide</li>
-                </ul>
-              </div>
-            </div>   
-            <div className="certificate-item">
-              <img src={TeachnookImg} alt="Teachnook" />
-              <div className="certificate-info">
-                <div className="certificate-heading">
-                  <h2>WEB DEVELOPMENT</h2>
-                  <span>MARCH/2022 - APR/2022</span>
-                </div>
-                <hr className='certificate-hr' />
-                <ul className='certificate-info-subbox'>
-                  <li>This was a TRAINING + INTERNSHIP program in this I have learned <strong>HTML, CSS and JAVASCRIPT</strong> and than at last I got to work on two MINOR PROJECTS which is a <strong>TRAVELLING WEBSITE</strong> and a <strong>WEATHER WEBSITE</strong></li>
-                </ul>
-              </div>
-            </div>   
         </div>
-        <div className="certificate-buttons">
-          <button id={"prev-btn"}>{"<"}</button>
-          <div style={{display:"grid",justifyContent:"center",alignItems:"center"}}>
-            <div><span ref={currentWindowRef}>1</span>/<span ref={itemSizeRef}>1</span></div>
-            <input type="checkbox" name="stopstate" id={"stopstate"} onClick={toggleWindow} />
+      </section>
+      <section className='section-certificate'>
+        <h1>NPTEL CERTIFICATES</h1>
+        <div className="nptel-certificates">
+          <div className="certificate-box">
+            <img src={PythonImg} alt="python certificate" className="nptel-certificate front-certificate" />
+            <img src={JavaImg} alt="java certificate" className="nptel-certificate back-certificate" />
+            <img src={DataMiningImg} alt="datamining certificate" className="nptel-certificate back-certificate" />
           </div>
-          <button id={"next-btn"}>{">"}</button>
         </div>
       </section>
     </>
   )
 
-  function nextWindow(){
-    const stopButton = document.querySelector("#stopstate")
-    console.log(stopButton.checked)
+  function move(){
+    const certificates = document.querySelectorAll(".nptel-certificate")
 
-    
-    !stopButton.checked && clearInterval(windowInterval.current)
+    currentWindow.current += 1;
 
-    const slides = document.querySelectorAll(".certificate-item")
-
-    currentWindow.current += 1
-    if(currentWindow.current>itemSize.current-1){
-      currentWindow.current = 0
+    if(currentWindow.current >= itemSize.current){
+      currentWindow.current = 0;
     }
 
-    currentWindowRef.current.innerHTML = currentWindow.current + 1
-
-    slides.forEach((slide)=>{
-      if(currentWindow.current===0 && !slide.classList.contains("transition-zero")){
-        slide.classList.add("transition-zero")
+    certificates.forEach((item,index)=>{
+      if(index===currentWindow.current){
+        if(!item.classList.contains("front-certificate")){
+          item.classList.add("front-certificate");
+          item.classList.remove("back-certificate");
+          console.log(item)
+        }
+      }else if(item.classList.contains("front-certificate")){
+        item.classList.remove("front-certificate");
+        item.classList.add("back-certificate");
       }
-      else if(currentWindow.current!==0 && slide.classList.contains("transition-zero")){
-        slide.classList.remove("transition-zero")
-      }
-
-      slide.style.transform = `translateX(-${100*(currentWindow.current)}%)`;
     })
 
-    if(!stopButton.checked) windowInterval.current = setInterval(nextWindow,5000)
   }
-
-  function prevWindow(){
-    const stopButton = document.querySelector("#stopstate")
-
-    !stopButton.checked && clearInterval(windowInterval.current)
-    const slides = document.querySelectorAll(".certificate-item")
-    
-    currentWindow.current -= 1
-
-    if(currentWindow.current<0){
-      currentWindow.current = itemSize.current-1
-    }
-
-    currentWindowRef.current.innerHTML = currentWindow.current + 1
-
-    slides.forEach((slide)=>{
-      if(currentWindow.current===itemSize.current-1 && !slide.classList.contains("transition-zero")){
-        slide.classList.add("transition-zero")
-      }
-      else if(currentWindow.current!==itemSize.current-1 && slide.classList.contains("transition-zero")){
-        slide.classList.remove("transition-zero")
-      }
-      
-      slide.style.transform = `translateX(-${100*(currentWindow.current)}%)`;
-          
-    })
-    if(!stopButton.checked) windowInterval.current = setInterval(nextWindow,5000)
-  }
-
-  function toggleWindow(e){
-
-    if(e.target.checked){
-      clearInterval(windowInterval.current)
-    }else{
-      windowInterval.current = setInterval(nextWindow,5000)
-    }
-  }
-
 }
 
 export default App

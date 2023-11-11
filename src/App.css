@@ -25,6 +25,7 @@ h1{
 }
 
 .section-info p{
+  text-align: justify;
   font-size: clamp(0.7em,1.1vw,1.5em);
 }
 
@@ -111,6 +112,7 @@ h1{
 }
 
 .certificate-info-subbox li{
+  text-align: justify;
   font-size: clamp(0.5em,1.2vw,2em);
 }
 
@@ -155,6 +157,149 @@ h1{
 
 /* section education */
 
+/* section projects */
+
+.section-projects{
+  padding:3rem;
+  padding-top:1.8rem;
+}
+
+.section-projects h1{
+  margin-bottom: 3.5rem;
+  text-align: center;
+  font-size: 4em;
+  color:var(--blue-dark-80);
+}
+
+.projects-grid{
+  display: grid;
+  width: 100%;
+  row-gap: 2rem;
+}
+
+.projects-card{
+  display: grid;
+  width:100%;
+  justify-content: center;
+  background-color:#072f4e;
+  row-gap:1rem;
+  padding:2rem 3rem;
+}
+
+.projects-list{
+  display: grid;
+  width: 100%;
+  background-color: whitesmoke;
+  padding:1.2rem 2rem;
+  color:var(--blue-dark-80);
+  border-radius: 10px;
+  row-gap: 0.2rem;
+}
+
+.projects-list li{
+  text-align: justify;
+  font-size: clamp(0.5em,1.1vw,2em);
+}
+
+/* section nptel */
+
+.section-certificates{
+  position: relative;
+}
+
+.nptel-certificates{
+  display: grid;
+  position: relative;
+  width: 100%;
+  height: 43rem;
+  padding: 3rem 5rem;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.nptel-certificates::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateX(45deg);
+  background-color: #023047;
+  z-index:-1;
+}
+
+.certificate-box{
+  display: flex;
+  position: relative;
+  width: 56rem;
+  height: 100%;
+  border:20px solid #0a425e;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.nptel-certificate{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  top:0;
+  left:0;
+}
+
+.section-certificate:last-child h1{
+  margin-bottom: 1.7rem;
+}
+
+.front-certificate{
+  transform: perspective(3000px) translateZ(0);
+  transition: transform 0s linear;
+  animation: rotateUp 0.8s 1 linear;
+}
+
+.back-certificate{
+  transform: perspective(3000px) translateZ(-1px);
+  transition: transform 0.2s linear;
+}
+
+@keyframes rotateUp{
+  from{
+    transform: perspective(3000px) rotateX(-180deg);
+  }to{
+    transform: perspective(3000px) rotateX(0deg);
+  }
+}
+
+@media screen and (max-width:1250px){
+  .nptel-certificates{
+    width: 100%;
+    height: 40rem;
+  }
+  
+  .certificate-box{
+    width: 50rem;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width:1060px){
+  .nptel-certificates{
+    height: 34rem;
+    padding: 2rem;
+  }
+  
+  .certificate-box{
+    width: 40rem;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width:950px) {
+  .section-certificate:last-child{
+    padding-left:0;
+    padding-right: 0;
+  }
+}
+
 @media screen and (max-width:1000px){
   .certificate-frame{
     height:650px;
@@ -187,7 +332,7 @@ h1{
   }
 
   .certificate-info-subbox li{
-    font-size: clamp(0.8em,1.2vw,2em);
+    font-size: clamp(1rem,1.2vw,2rem);
   }
 
 }
@@ -226,25 +371,80 @@ h1{
   .small-font{
     font-size: clamp(0.65em,1vw,4em);
   }
+
+  .section-projects{
+    padding:2rem 1.5rem;
+  }
+
+  .projects-card{
+    padding:2rem;
+  }
+
+  .projects-list{
+    padding:1.5rem 1rem;
+    row-gap: 0.6rem;
+    list-style:none;
+  }
+  
+  .projects-list li{
+    font-size: clamp(0.7em,1.2vw,2em);
+  }
+
+  .projects-card h2{
+    font-size: 1.5em;
+  }
+
+  .nptel-certificates{
+    height: 23rem;
+  }
+  
+  .certificate-box{
+    width: 30rem;
+  }
+  
 }
 
 @media screen and (max-width:650px) {
-    .section-info h1,.section-skills h1,.section-certificate h1{
+    .section-info h1,.section-skills h1,.section-certificate h1,.section-projects h1{
         font-size: clamp(3em,3vw,10em);
     }
     .section-education{
       font-size:clamp(0.8em,1.2vw,5em) ;
     }
+    
+    .projects-card{
+      padding:1.5rem;
+    }
+
+    .projects-card h2{
+      font-size: 1em;
+    }
+
+    .nptel-certificates{
+      height: 22rem;
+    }
+    
+    .certificate-box{
+      width: 26rem;
+    }
 }
 
 
 @media (max-width:541px) {
+  .section-projects{
+    padding-bottom: 0;
+  }
+
   .section-certificate h1{
     margin-bottom: 2.3rem;
   }
 
+  .section-certificate:last-child h1{
+    margin-bottom: 0.5rem;
+  }
+
   .certificate-frame{
-    height: 500px;
+    height: 530px;
   }
 
   .certificate-frame img,.certificate-img{
@@ -306,6 +506,23 @@ h1{
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .section-projects{
+    padding-top:1.2rem;
+  }
+
+  .nptel-certificates{
+    height: 17rem;
+  }
+
+  .nptel-certificate{
+    aspect-ratio: 16/8;
+  }
+  
+  .certificate-box{
+    width: 20rem;
+  }
+
   
 }
 
@@ -315,5 +532,12 @@ h1{
   }
   .certificate-info-subbox li{
     font-size: clamp(0.55em,1.2vw,2em);
+  }
+  .projects-list li{
+    font-size: clamp(0.5em,1.2vw,2em);
+  }
+
+  .projects-list h2{
+    font-size: 1em;
   }
 }
