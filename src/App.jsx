@@ -108,6 +108,27 @@ function App() {
           </div>
         </div>
       </section>
+      <section className="section-footer">
+          <div className="footer-card">
+            <h2>Achievements</h2>
+            <ul>
+               <li><a href="https://leetcode.com/Pranjul_Jain/">LeetCode</a>: Solved 131 questions, Contest rating 1505</li>
+               <li><a href="https://auth.geeksforgeeks.org/user/pranjuljainp">GeeksForGeeks</a>: Solved 109 problems</li>
+               <li><a href="https://www.hackerrank.com/profile/pranjuljainp">HackerRank</a>: 5-star coder in Python and C++</li>
+            </ul>
+          </div>
+          <div className="footer-card">
+            <h2>Tools Used</h2>
+            <ul>
+              <li><i class="fa-solid fa-code"></i> Vscode IDE</li>
+              <li><i class="fa-solid fa-code"></i> Pycharm IDE</li>
+              <li><i class="fa-solid fa-code"></i> Google Colaboratory</li>
+              <li><i class="fa-solid fa-code"></i> Arduino IDE</li>
+              <li><i class="fa-solid fa-microchip"></i> Arduino Tinkercad</li>
+              <li><i class="fa-solid fa-file-excel"></i> Microsoft Excel</li>
+            </ul>
+          </div>
+      </section>
     </>
   )
 
