@@ -31,6 +31,35 @@ h1{
 
 /* # section skills */
 
+/* section experience */
+
+.section-experience{
+  padding:3rem;
+  padding-top:1.8rem;
+  text-align:center;
+}
+
+.section-experience h1{
+  text-align: center;
+  font-size: clamp(3.3em,4em,5em);
+  color: var(--blue-dark-80);
+}
+
+.experience-box {
+  display: flex;
+  justify-content: center;
+  gap:1rem;
+}
+
+.certified{
+  border-radius: 50%;
+  height:500px;
+}
+
+.experience-img{
+  height: 700px;
+}
+
 
 /* # section certificate */
 
@@ -354,6 +383,10 @@ h1{
     height: 40rem;
   }
   
+  .certified{
+    height: 300px;
+  }
+
   .certificate-box{
     width: 50rem;
     height: 100%;
@@ -380,6 +413,10 @@ h1{
   .nptel-certificates{
     height: 34rem;
     padding: 2rem;
+  }
+
+  .certified{
+    display: none;
   }
   
   .certificate-box{
@@ -515,11 +552,27 @@ h1{
 }
 
 @media screen and (max-width:650px) {
-    .section-info h1,.section-skills h1,.section-certificate h1,.section-projects h1{
+    .section-info h1,.section-skills h1,.section-certificate h1,.section-projects h1,.section-experience h1{
         font-size: clamp(3em,3vw,10em);
     }
     .section-education{
       font-size:clamp(0.8em,1.2vw,5em) ;
+    }
+
+    .section-experience h1{
+      margin-bottom: 10px;
+      font-size:clamp(2.4em,2.4vw,5em) ;
+    }
+
+    .certified{
+      display: none;
+    }
+    .section-experience{
+      padding-bottom: 0;
+    }
+
+    .experience-img{
+      height: 500px;
     }
     
     .projects-card{

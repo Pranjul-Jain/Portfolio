@@ -6,7 +6,7 @@ import Slider from './components/Slider/Slider'
 import DataMiningImg from "./assets/images/Data Mining.jpeg"
 import JavaImg from "./assets/images/Programming In Java.jpeg"
 import PythonImg from "./assets/images/Programming, Data Structures And Algorithms Using Python.jpeg"
-import './App.css'
+import '@/src/App.css'
 
 function App() {
   
@@ -46,9 +46,17 @@ function App() {
         online resources.
         </p>
       </section>
+      <section className='section-experience'>
+        <h1>EXPERIENCE</h1>
+        <div className='experience-box'>
+        <img src="/ExperienceWybble.jpg" className='experience-img' />
+        <img src="/certified.jpg" className='certified' />
+        </div>
+     
+      </section>
+      <Slider/>
       <Education/>
       <Skills/>
-      <Slider/>
       <section className="section-projects">
         <h1>PROJECTS</h1>
         <div className="projects-grid">

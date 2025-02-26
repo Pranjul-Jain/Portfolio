@@ -15,7 +15,7 @@ const Certificates = () => {
             <div className="certificate-info">
             <div className="certificate-heading">
                 <h2>MENTOR</h2>
-                <span>CURRENTLY WORKING</span>
+                <span>Apr-2023 - Mar-2024</span>
             </div>
             <hr className='certificate-hr' />
             <ul className='certificate-info-subbox'>
